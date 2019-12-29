@@ -37,4 +37,9 @@ class projectController extends Controller
     {
         return $this->project->getAllDailyReport($user_id);
     }
+
+    public function show($id)
+    {
+        return $this->project->find($id);
+    }
 }

@@ -17,9 +17,9 @@ class ProjectsTableSeeder extends Seeder
         for( $cnt = 1; $cnt <= 30; $cnt++ ) {
             $faker = Faker\Factory::create('ja_JP');
             Project::create([
-                'user_id' => $cnt,
+                'user_id' => 1,
                 'category_id' => $cnt,
-                'title' => $faker->text,
+                'title' => $faker->word,
                 'outline' => $faker->text,
                 'total_time' => $faker->randomFloat(1, 0, 750),
             ]);
