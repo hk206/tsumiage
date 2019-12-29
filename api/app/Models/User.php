@@ -6,21 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
+    /**
+     * リレーション
+     */
     public function projects()
     {
         return $this->hasMany('App\Models\Project');
     }
     public function dailyReportLikes()
     {
-        return $this->hasMany('App\Models\dailyReportLike');
+        return $this->hasMany('App\Models\DailyReportLike');
     }
     public function summaryLikes()
     {
-        return $this->hasMany('App\Models\summaryLike');
+        return $this->hasMany('App\Models\SummaryLike');
     }
     public function dailyReportComments()
     {
-        return $this->hasMany('App\Models\dailyReportComment');
+        return $this->hasMany('App\Models\DailyReportComment');
     }
     public function summaryComments()
     {
