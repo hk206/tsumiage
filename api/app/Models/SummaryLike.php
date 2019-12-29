@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class SummaryLike extends Model
 {
+    /**
+     * リレーション
+     */
     public function user()
     {
         return $this->belongsTo('App\Models\User');

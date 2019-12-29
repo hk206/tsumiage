@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+    /**
+     * リレーション
+     */
     public function dailyReports()
     {
         return $this->hasMany('App\Models\DailyReport');
