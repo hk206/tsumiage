@@ -6,6 +6,27 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+
+    public function getDailyReportByCategory($categoryId)
+    {
+        return $this->where('category_id', $categoryId)->with(['dailyReports'])->get();
+    }
+
+    public function getSummaryByCategory($categoryId)
+    {
+        return $this->where('category_id', $categoryId)->with(['summaries'])->get();
+    }
+
+    public function getAllDailyReport($user_id)
+    {
+        return $this->where('user_id', $user_id)->with(['dailyReports'])->get();
+    }
+
+    public function getAllSummary()
+    {
+        return $this->where('user_id', $user_id)->with(['summaries'])->get();
+    }
+
     /**
      * リレーション
      */
