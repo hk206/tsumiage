@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\DailyReportComment;
+use App\Models\SummaryLike;
 
 
-class DailyReportCommentsTableSeeder extends Seeder
+class SummaryLikesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,14 +13,13 @@ class DailyReportCommentsTableSeeder extends Seeder
      */
     public function run()
     {
-        DailyReportComment::truncate();
+        SummaryLike::truncate();
 
         for( $cnt = 1; $cnt <= 30; $cnt++ ) {
             $faker = Faker\Factory::create('ja_JP');
-            DailyReportComment::create([
+            SummaryLike::create([
                 'user_id' => $cnt,
-                'daily_report_id' => $cnt,
-                'content' => $faker->text,
+                'summary_id' => $cnt,
             ]);
         }
     }
