@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/user/{id}','UserController@show');
+Route::get('/project/{id}','ProjectController@show');
+Route::get('/project/user/{id}','ProjectController@myPage');
+
 Route::get('/', function () {
     return view('welcome');
 });
