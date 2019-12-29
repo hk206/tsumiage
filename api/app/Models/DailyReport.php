@@ -6,16 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class DailyReport extends Model
 {
+    /**
+     * リレーション
+     */
     public function dailyReportComments()
     {
         return $this->hasMany('App\Models\DailyReportComment');
     }
     public function dailyReportLikes()
     {
-        return $this->hasMany('App\Models\DailyReportLikes');
+        return $this->hasMany('App\Models\DailyReportLike');
     }
     public function project()
     {
-        return $this->belongsTo('App\Models\ProjecSt');
+        return $this->belongsTo('App\Models\Project');
     }
 }

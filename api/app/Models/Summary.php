@@ -6,9 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Summary extends Model
 {
-    public function summaries()
+    /**
+     * リレーション
+     */
+    public function summaryComments()
     {
-        return $this->hasMany('App\Models\Summary');
+        return $this->hasMany('App\Models\SummaryComment');
     }
     public function summaryLikes()
     {
